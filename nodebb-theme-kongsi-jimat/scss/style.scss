@@ -1,0 +1,150 @@
+$body-bg: #121320;
+$text-color: #ffffff;
+$card-bg: #222336;
+$link-color: #8c9eff;
+$sidebar-bg: #121320;
+$muted-color: #9ca3af;
+
+body {
+    background-color: $body-bg;
+    color: $text-color;
+}
+
+// Global Link Colors
+a {
+    color: $link-color;
+    text-decoration: none;
+    &:hover {
+        color: lighten($link-color, 15%);
+        text-decoration: underline;
+    }
+}
+
+// Fix "NodeBB" Brand Link visibility
+.brand-container a, .navbar-brand, [component="brand/wrapper"] {
+    color: #ffffff !important;
+    font-weight: bold;
+
+    h1 {
+        color: #ffffff !important;
+    }
+}
+
+// Typography Overrides
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: #ffffff;
+}
+
+.text-muted, small, .small {
+    color: $muted-color !important;
+}
+
+// Sidebar Customization
+.sidebar {
+    background-color: $sidebar-bg !important;
+    border-right: 1px solid lighten($sidebar-bg, 10%);
+
+    .nav-link {
+        color: rgba(255, 255, 255, 0.75) !important;
+        
+        &:hover, &.active {
+            background-color: lighten($sidebar-bg, 10%);
+            color: #ffffff !important;
+        }
+
+        i {
+            color: inherit;
+        }
+    }
+}
+
+// Harmony Specific: Override forced light sidebar
+.skin-noskin {
+    nav.sidebar, .bottombar-nav {
+        background-color: $sidebar-bg !important;
+        color: $text-color !important;
+        border-right: 1px solid #2a2b3d;
+    }
+    
+    // Fix dropdown menus in bottom bar if applicable
+    .bottombar-nav .dropdown-menu {
+        background-color: $card-bg !important;
+        color: $text-color !important;
+    }
+}
+
+// Cards (Categories, etc.)
+.card {
+    background-color: $card-bg;
+    border: 1px solid lighten($card-bg, 10%);
+    color: $text-color;
+
+    .card-header {
+        background-color: darken($card-bg, 3%);
+        border-bottom: 1px solid lighten($card-bg, 10%);
+        color: $text-color;
+    }
+
+    .card-footer {
+        background-color: darken($card-bg, 3%);
+        border-top: 1px solid lighten($card-bg, 10%);
+        color: $text-color;
+    }
+}
+
+// Categories Specific
+.categories-list {
+    .category-item {
+        background-color: $card-bg; // Ensure category rows match
+        
+        .category-icon {
+            color: #fff; // Ensure icons are visible
+        }
+
+        .category-title {
+            color: #fff;
+        }
+    }
+}
+
+// Buttons
+.btn-primary {
+    background: linear-gradient(90deg, #7a4fdb 0%, #d04ed6 100%);
+    border: none;
+    color: white;
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+// Inputs (Search, etc.)
+.form-control {
+    background-color: darken($card-bg, 5%);
+    border: 1px solid lighten($card-bg, 10%);
+    color: #fff;
+
+    &:focus {
+        background-color: darken($card-bg, 5%);
+        color: #fff;
+        border-color: $link-color;
+        box-shadow: 0 0 0 0.25rem rgba($link-color, 0.25);
+    }
+    
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+// Fix Register Button & text-body in Dark Theme
+.text-body {
+    color: #ffffff !important; 
+}
+
+.btn-outline-light {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+    &:hover {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+    }
+}

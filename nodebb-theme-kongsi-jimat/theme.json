@@ -1,0 +1,10 @@
+{
+    "id": "nodebb-theme-kongsi-jimat",
+    "name": "KongsiJimat Theme",
+    "description": "KongsiJimat Theme",
+    "screenshot": "screenshot.png",
+    "url": "http://localhost:4567",
+    "baseTheme": "nodebb-theme-harmony",
+    "templates": "templates",
+    "staticDir": "static"
+}

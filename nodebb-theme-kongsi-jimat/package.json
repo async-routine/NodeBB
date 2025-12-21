@@ -1,0 +1,9 @@
+{
+  "name": "nodebb-theme-kongsi-jimat",
+  "version": "1.0.0",
+  "description": "KongsiJimat Theme for NodeBB",
+  "main": "index.js",
+  "nodebb": {
+    "theme": "theme.json"
+  }
+}
