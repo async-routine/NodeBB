@@ -1,0 +1,28 @@
+{
+    "id": "nodebb-plugin-kongsi-deals",
+    "name": "Kongsi Jimat Deals",
+    "description": "Adds deal functionality and custom fields to NodeBB topics",
+    "url": "https://github.com/kongsi-jimat/nodebb-plugin-kongsi-deals",
+    "library": "./library.js",
+    "scripts": [
+        "static/lib/composer.js"
+    ],
+    "hooks": [
+        {
+            "hook": "action:topic.save",
+            "method": "topicSaved"
+        },
+        {
+            "hook": "filter:topic.save",
+            "method": "topicSave"
+        },
+        {
+            "hook": "filter:topic.get",
+            "method": "topicGet"
+        },
+        {
+            "hook": "filter:topics.get",
+            "method": "topicsGet"
+        }
+    ]
+}

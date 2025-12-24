@@ -1,0 +1,10 @@
+{
+    "name": "nodebb-plugin-kongsi-deals",
+    "version": "1.0.0",
+    "description": "Kongsi Jimat Deals Plugin for NodeBB",
+    "main": "library.js",
+    "nbbpm": {
+        "compatibility": "^3.0.0"
+    },
+    "dependencies": {}
+}
